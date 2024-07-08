@@ -44,11 +44,11 @@ const swaggerOptions = {
             description : "A Simple Express API with Swagger"
         },
 
-        host : "localhost:3004",
+        host : "saidmohammed-app-5edbe9f026ce.herokuapp.com",
         basePath : '/',
         schemas : ['http']
     },
-    server : [ { url : `http://localhost:${port}`}],
+    server : [ { url : `https://saidmohammed-app-5edbe9f026ce.herokuapp.com`}],
     apis : ['./server.js']
 }
 
@@ -387,7 +387,7 @@ app.delete('/api/products/:id', async(req, res) => {                  // same as
 
 app.listen(port, () => {
 
-    console.log(`Server is Running on http://localhost:${port}`)
-    console.log(`Swagger UI is Available on http://localhost:${port}/api-ui`)
+    console.log(`Server is Running on https://saidmohammed-app-5edbe9f026ce.herokuapp.com`)
+    console.log(`Swagger UI is Available on https://saidmohammed-app-5edbe9f026ce.herokuapp.com/api-ui`)
 
 });
