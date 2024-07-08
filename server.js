@@ -18,9 +18,7 @@ const app = express();
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
-// const port = 3004;
-const port = process.env.PORT || 5678;
-
+const port = 3004;
 
 app.use(cors())
 
@@ -46,11 +44,11 @@ const swaggerOptions = {
             description : "A Simple Express API with Swagger"
         },
 
-        host : "saidmohammed-app-5edbe9f026ce.herokuapp.com",
+        host : "localhost:3004",
         basePath : '/',
-        schemas : ['http2']
+        schemas : ['http']
     },
-    server : [ { url : `https://saidmohammed-app-5edbe9f026ce.herokuapp.com`}],
+    server : [ { url : `http://localhost:${port}`}],
     apis : ['./server.js']
 }
 
@@ -389,7 +387,7 @@ app.delete('/api/products/:id', async(req, res) => {                  // same as
 
 app.listen(port, () => {
 
-    console.log(`Server is Running on https://saidmohammed-app-5edbe9f026ce.herokuapp.com`)
-    console.log(`Swagger UI is Available on https://saidmohammed-app-5edbe9f026ce.herokuapp.com/api-ui`)
+    console.log(`Server is Running on http://localhost:${port}`)
+    console.log(`Swagger UI is Available on http://localhost:${port}/api-ui`)
 
 });

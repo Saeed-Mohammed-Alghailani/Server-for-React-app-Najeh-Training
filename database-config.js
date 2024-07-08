@@ -1,14 +1,13 @@
 const sql = require("mssql")
 const config = { 
 
-    user : 'saidadmin',
-    password : 'Ss$95392644',
-    server   : 'servershopping.database.windows.net',
-    database : 'shoppingdb',
+    user : 'sa',
+    password : 'sa',
+    server   : 'localhost',
+    database : 'Shopping_DB',
     options  : {
 
-        // trustServerCertificate : true
-        encrypt: true // use this if you're using Azure
+        trustServerCertificate : true
     }
 };
 
