@@ -3,7 +3,7 @@ const config = {
 
     user : 'sa',
     password : 'sa',
-    server   : 'localhost',
+    server   : 'saidmohammed-app-5edbe9f026ce.herokuapp.com',
     database : 'Shopping_DB',
     options  : {
 
