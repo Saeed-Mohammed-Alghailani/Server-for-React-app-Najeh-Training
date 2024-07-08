@@ -46,7 +46,7 @@ const swaggerOptions = {
 
         host : "saidmohammed-app-5edbe9f026ce.herokuapp.com",
         basePath : '/',
-        schemas : ['http']
+        schemas : ['http2']
     },
     server : [ { url : `https://saidmohammed-app-5edbe9f026ce.herokuapp.com`}],
     apis : ['./server.js']
