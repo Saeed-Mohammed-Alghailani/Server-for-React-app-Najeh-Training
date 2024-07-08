@@ -18,7 +18,9 @@ const app = express();
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
-const port = 3004;
+// const port = 3004;
+const port = process.env.PORT || 5678;
+
 
 app.use(cors())
 
