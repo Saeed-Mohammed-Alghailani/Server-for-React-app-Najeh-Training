@@ -17,8 +17,8 @@ const app = express();
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-
-const port = 3004;
+// const port = 3004;
+const port = process.env.PORT || 5678;
 
 app.use(cors())
 
@@ -44,11 +44,11 @@ const swaggerOptions = {
             description : "A Simple Express API with Swagger"
         },
 
-        host : "localhost:3004",
+        host : "saidmohammed-app-5edbe9f026ce.herokuapp.com",
         basePath : '/',
-        schemas : ['http']
+        schemas : ['http2']
     },
-    server : [ { url : `http://localhost:${port}`}],
+    server : [ { url : `https://saidmohammed-app-5edbe9f026ce.herokuapp.com`}],
     apis : ['./server.js']
 }
 
@@ -231,7 +231,6 @@ app.post('/api/loginuser', async(req, res) => {          // same as in @swagger
     }
 });
 
-
 // =============================== REGISTER SP ============================================
 app.post('/api/user', async(req, res) => {                  // same as @swagger 
 
@@ -328,7 +327,6 @@ app.put('/api/products/:id', async(req, res) => {                  // same as  i
 
 // =========================== Get Product BY Cat SP ================================
 
-
 app.get('/api/products/:id', async(req, res) => {                  // same as  in @swagger 
 
     try{
@@ -342,7 +340,6 @@ app.get('/api/products/:id', async(req, res) => {                  // same as  i
         res.status(500).send(error.message);
     }
 });
-
 
 // =========================== Get Product BY ID ================================
 let unchangedFile;
@@ -366,7 +363,6 @@ app.get('/api/product/:id', async(req, res) => {                  // same as  in
 });
 
 
-
 // ===============================  DELETE PRODUCT SP ============================
 
 app.delete('/api/products/:id', async(req, res) => {                  // same as  in @swagger 
@@ -387,7 +383,7 @@ app.delete('/api/products/:id', async(req, res) => {                  // same as
 
 app.listen(port, () => {
 
-    console.log(`Server is Running on http://localhost:${port}`)
-    console.log(`Swagger UI is Available on http://localhost:${port}/api-ui`)
+    console.log(`Server is Running on https://saidmohammed-app-5edbe9f026ce.herokuapp.com`)
+    console.log(`Swagger UI is Available on https://saidmohammed-app-5edbe9f026ce.herokuapp.com/api-ui`)
 
 });
